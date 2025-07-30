@@ -1,0 +1,25 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploying the new app version
+        uses: kostya-ten/ssh-server-deploy@v4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          private_key: ${{ secrets.SSH_KEY }}
+          scp_source: .
+          scp_target: ${{ secrets.SSH_TARGET }}
+          after_script: |
+            cd /home/portfolio && docker compose up -d --build
