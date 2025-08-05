@@ -43,7 +43,7 @@ export const experience: Experience[] = [
     location: "Remote",
   },
   {
-    title: "Technical Assistnat",
+    title: "Technical Assistant",
     company: "Epitech PARIS",
     period: "sept 2023 - jun 2024",
     description:
