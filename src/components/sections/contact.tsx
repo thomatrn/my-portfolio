@@ -34,7 +34,7 @@ export const ContactSection: React.FC = () => {
               </Link>
             </AnimatedButton>
             <AnimatedButton size="lg" variant="outline" className="contact-button animated-item" asChild>
-              <Link href="https://linkedin.com" target="_blank">
+              <Link href="https://www.linkedin.com/in/tran-thomas-dev/" target="_blank">
                 <Linkedin className="mr-2 h-5 w-5" />
                 Connect on LinkedIn
               </Link>
